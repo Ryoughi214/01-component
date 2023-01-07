@@ -7,6 +7,8 @@
     <h1>我是根组件</h1>
     <!-- 使用组件:当成自定义html标签 -->
     <MyGoods></MyGoods>
+    <MyGoods></MyGoods>
+    <my-goods></my-goods>
   </div>
 </template>
 
