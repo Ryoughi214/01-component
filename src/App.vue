@@ -17,7 +17,7 @@
 <script>
 //  导入组件
 import MyGoods from "@/MyGoods.vue"
-import MyButton from "./MyButton.vue";
+import MyButton from "@/MyButton.vue";
 // 2.组件 js代码
 // 组件vue实例
 export default {
