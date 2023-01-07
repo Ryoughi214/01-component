@@ -38,6 +38,7 @@ data() {
 
 <style>
 .box{
-  background-color: #f00;
+  /* background-color: #f00; */
+  border: 10px solid #33e1f1;
 }
 </style>

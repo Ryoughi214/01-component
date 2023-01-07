@@ -23,7 +23,7 @@ export default {
    (1)scoped作用 :给子组件添加css作用域,避免子组件样式被父组件覆盖
    (2)scoped原理 :给子组件添加自定义属性 data-v-xxxx,通过css选择器增加权重 */
 .box{
-    border: 2px solid #1f1177;
+    border: 21px solid #1f1;
 }
 
 </style>
