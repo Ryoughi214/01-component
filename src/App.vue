@@ -1,8 +1,8 @@
 <template>
   <div class="todoapp">
-    <TodoFooter></TodoFooter>
-    <TodoHeader></TodoHeader>
-    <TodoMain></TodoMain>
+    <TodoHeader :arr="list" ></TodoHeader>
+    <TodoMain :arr="list" @delete="list.splice($event,1)"></TodoMain>
+    <TodoFooter :arr="list" @clear="doClear"></TodoFooter>
   </div>
 </template>
 
@@ -11,13 +11,15 @@
 import "@/assets/css/base.css"
 import "@/assets/css/index.css"
 //2.导入局部组件
-import TodoFooter from "@/components/TodoFooter.vue"
 import TodoHeader from "@/components/TodoHeader.vue"
 import TodoMain from "@/components/TodoMain.vue"
+import TodoFooter from "@/components/TodoFooter.vue"
+
+
 export default {
   name:'App',
   //注册组件
-  components:{TodoFooter,TodoHeader,TodoMain},
+  components:{TodoHeader,TodoMain,TodoFooter},
   data() {
     return {
       list: [
@@ -28,7 +30,10 @@ export default {
     }
   },
   methods: {
-    
+    // 把isDone =true删除
+  doClear(){
+  this.list = this.list.filter(item=>!item.isDone)
+  }
   }
 }
 </script>

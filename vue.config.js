@@ -1,5 +1,4 @@
 const { defineConfig } = require('@vue/cli-service')
-const { setInterval } = require('core-js/library/es6')
 module.exports = defineConfig({
   // devServer: { // 自定义服务配置
   //   host:'127.0.0.1',

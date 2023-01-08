@@ -1,11 +1,11 @@
 <template>
   <ul class="todo-list">
     <!-- completed: 完成的类名 -->
-    <li >
+    <li v-for="(item, index) in arr" :key="index">
       <div class="view">
-        <input  class="toggle" type="checkbox" />
-        <label></label>
-        <button  class="destroy"></button>
+        <input  v-model="item.isDone" class="toggle" type="checkbox" />
+        <label>{{ item.name }}</label>
+        <button @click="$emit('delete',index)" class="destroy"></button>
       </div>
     </li>
   </ul>
@@ -13,6 +13,12 @@
 
 <script>
 export default {
- 
-}
+props:{
+   arr:Array},
+// data(){
+//   return {
+//   arr:'' 
+//   }
+// },
+ }
 </script>
